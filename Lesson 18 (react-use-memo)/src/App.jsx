@@ -40,10 +40,12 @@ const App = () => {
       <br />
 
       <label htmlFor="">Random Input:</label>
-      <input type="text" />
+      <input type="text" 
       value={randomInput}
       placeholder='Type anything...'
-      onChange={(e) => setUserInput(e.target.value)}
+      onChange={(e) => setRandomInput(e.target.value)}
+      />
+      <p>Result: {randomInput}</p>
 
     </main>
   )
