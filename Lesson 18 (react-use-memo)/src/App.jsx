@@ -43,7 +43,7 @@ const App = () => {
       <input type="text" />
       value={randomInput}
       placeholder='Type anything...'
-      onChange={(e) =>setUserInput(e.target.value)}
+      onChange={(e) => setUserInput(e.target.value)}
 
     </main>
   )
