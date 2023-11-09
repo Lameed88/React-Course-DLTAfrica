@@ -22,8 +22,8 @@ const App = () => {
       <br />
       <br />
       <section>
-        <button></button>
-        <button></button>
+        <button>Stop</button>
+        <button>Start</button>
       </section>
     </main>
   )
