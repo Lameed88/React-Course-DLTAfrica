@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 const App = () => {
+  const 
   const [userInput, setUserInput] = useState("");
   const [count, setCount] = useState(0);
   const [color, setColor] = useState(false);
@@ -8,9 +9,10 @@ const App = () => {
   return (
     <main className="App" style={{ color: color ? "#fff" : "#fff952" }}>
       <input
-        onChange={(e) => setUserInput(e.target.value)}
+     
         type="text"
         value={userInput}
+        onChange={(e) => setUserInput(e.target.value)}
      
       />
 
