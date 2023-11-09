@@ -11,10 +11,7 @@ const App = () => {
 
   return(
     <main className="App">
-   
-
-
-      <label htmlFor="">Random Input:</label>
+  
       <input type="text" 
       value={randomInput}
       placeholder='Type anything...'
