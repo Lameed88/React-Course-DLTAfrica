@@ -45,7 +45,6 @@ const App = () => {
       onChange={(e) => setRandomInput(e.target.value)}
       />
       <p>Result: {randomInput}</p>
-
     </main>
   )
 
