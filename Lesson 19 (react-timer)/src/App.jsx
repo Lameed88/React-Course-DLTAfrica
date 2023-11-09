@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import { render } from "react-dom";
 
 const App = () => {
   const [randomInput, setRandomInput] = useState("");
@@ -26,6 +27,9 @@ const App = () => {
 
   const resetTimer = () => {
    stopTimer()
+   if (Seconds) {
+    render.current
+   }
 
 
   }
