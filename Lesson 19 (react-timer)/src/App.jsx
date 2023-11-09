@@ -28,7 +28,7 @@ const App = () => {
   const resetTimer = () => {
    stopTimer()
    if (Seconds) {
-    render.current
+    render.current ++
    }
 
 
