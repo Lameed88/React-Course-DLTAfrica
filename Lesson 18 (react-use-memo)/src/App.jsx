@@ -19,6 +19,8 @@ const App = () => {
       />
       <p>Renders: {randomInput}</p>
 
+      <br />
+      <br />
 
     </main>
   )
