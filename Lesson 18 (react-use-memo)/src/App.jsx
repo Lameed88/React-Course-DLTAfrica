@@ -18,6 +18,7 @@ const App = () => {
 
   }, [])
 
+  
 
   const fibNumber = useMemo(() => fib(userInput), [userInput, fib])
 
@@ -40,7 +41,7 @@ const App = () => {
 
       <label htmlFor="">Random Input:</label>
 
-      
+
     </main>
   )
 
