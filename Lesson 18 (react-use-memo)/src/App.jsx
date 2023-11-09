@@ -16,7 +16,7 @@ const App = () => {
     renders.current++
   }
   const focusOnInput = () => {
-    setRandomInput(e.target.value)
+    inputRef.current.focus()
   }
 
   return(
