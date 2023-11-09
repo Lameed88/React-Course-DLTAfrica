@@ -27,7 +27,7 @@ const App = () => {
      
         type="text"
         value={userInput}
-        onChange={(e) => dispatch({type: 'newUserInput', payload: e.target.value}))}
+        onChange={(e) => dispatch({type: 'newUserInput', payload: e.target.value})}
      
       />
 
