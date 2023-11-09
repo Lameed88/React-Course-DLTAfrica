@@ -33,6 +33,12 @@ const App = () => {
     <main className="App">
       <label htmlFor="">Fibonacci Sequence</label>
       <input type="text" placeholder="position" value={userInput} onChange={(e) => setUserInput(e.target.value)}/>
+
+      <p>Number: {fibNumber || "--"}</p>
+      <br />
+      <br />
+
+      <label htmlFor="">Random Input:</label>
       <h1>output:{userInput || ".."}</h1>
     </main>
   )
