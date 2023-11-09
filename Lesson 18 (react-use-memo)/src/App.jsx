@@ -7,8 +7,6 @@ const App = () => {
   const [seconds, setSeconds] = useState("0");
 
 
-
-
   return(
     <main className="App">
   
