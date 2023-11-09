@@ -2,6 +2,10 @@ import { useState, useEffect, useCallback, useMemo } from "react";
 
 import React from "react";
 
+const getArray = () => {
+  for
+}
+
 const App = () => {
   const [userInput, setUserInput] = useState("");
   const [result, setResult] = useState(0)
