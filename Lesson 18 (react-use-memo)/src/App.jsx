@@ -32,7 +32,7 @@ const App = () => {
   return(
     <main className="App">
       <label htmlFor="">Fibonacci Sequence</label>
-      <input type="text" placeholder="input" value={userInput} onChange={(e) => setUserInput(e.target.value)}/>
+      <input type="text" placeholder="position" value={userInput} onChange={(e) => setUserInput(e.target.value)}/>
       <h1>output:{userInput || ".."}</h1>
     </main>
   )
