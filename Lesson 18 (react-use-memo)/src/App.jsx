@@ -6,7 +6,6 @@ const App = () => {
   const [randomInput, setRandomInput] = useState("");
   const [seconds, setSeconds] = useState("0");
 
-  
 
   return(
     <main className="App">
