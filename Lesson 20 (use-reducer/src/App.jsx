@@ -22,6 +22,7 @@ const ACTION = {
   TG_COLOR:'tgColor'
 }
 
+
 const App = () => {
   const [state, dispatch] = useReducer(reducer,{count: 0, userInput:'', color:false})
   // const [userInput, setUserInput] = useState("");
