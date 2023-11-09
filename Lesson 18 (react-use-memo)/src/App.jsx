@@ -40,6 +40,9 @@ const App = () => {
       <br />
 
       <label htmlFor="">Random Input:</label>
+      <input type="text" />
+      value={randomInput}
+      plac
 
     </main>
   )
