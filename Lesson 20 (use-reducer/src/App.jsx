@@ -8,7 +8,7 @@ const App = () => {
   const [color, setColor] = useState(false)
   
   return (
-    <main className="App">
+    <main className="App" style={{{color: color ? '#fff' : '#fff92'}}}>
       <input
     
         onChange={handleInputChange}
