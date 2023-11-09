@@ -1,4 +1,4 @@
-import { useState, useEffect,  } from "react";
+import { useState, useRef } from "react";
 
 
 
@@ -36,7 +36,7 @@ const App = () => {
       <br />
       <br />
       <p>{randomInput}</p>
-      
+
     </main>
   )
 
