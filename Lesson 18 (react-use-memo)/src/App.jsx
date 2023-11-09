@@ -13,7 +13,9 @@ const App = () => {
   const [userInput, setUserInput] = useState("");
   const [randomInput, setRandomInput] = useState("");
 
-  const
+  const fib = useCallback((n) => {
+    
+  })
 
 
 
