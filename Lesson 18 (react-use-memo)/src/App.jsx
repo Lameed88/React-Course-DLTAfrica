@@ -8,7 +8,9 @@ const App = () => {
 
   const renders = useRef(0);
 
-  const handleInputChange
+  const handleInputChange = (e) => {
+    setRandomInput(e.targetvalue)
+  }
 
 
   return(
