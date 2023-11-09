@@ -42,7 +42,8 @@ const App = () => {
       <label htmlFor="">Random Input:</label>
       <input type="text" />
       value={randomInput}
-      plac
+      placeholder='Type anything...'
+      onChange={(e) =>setUserInput(e.target.value)}
 
     </main>
   )
