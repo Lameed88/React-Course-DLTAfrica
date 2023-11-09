@@ -21,7 +21,10 @@ const App = () => {
 
       <br />
       <br />
-
+      <section>
+        <button></button>
+        <button></button>
+      </section>
     </main>
   )
 
