@@ -3,7 +3,6 @@ import { useState, useRef } from "react";
 
 
 const App = () => {
-  const [userInput, setUserInput] = useState("");
   const [randomInput, setRandomInput] = useState("");
 
 
