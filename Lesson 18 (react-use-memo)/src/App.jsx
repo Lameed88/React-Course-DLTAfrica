@@ -14,7 +14,6 @@ const App = () => {
     renders.current++
   }
 
-
   return(
     <main className="App">
   
