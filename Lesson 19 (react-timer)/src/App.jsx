@@ -28,9 +28,10 @@ const App = () => {
   const resetTimer = () => {
    stopTimer()
    if (Seconds) {
-    render.current ++
+    render.current = 0
+    setSeconds(0)
    }
-
+   inputRef.current.focus
 
   }
 
