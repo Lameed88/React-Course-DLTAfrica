@@ -15,7 +15,13 @@ const App = () => {
       renders.current++;
       setSeconds((prev) => prev + 1);
     }, 1000);
+    inputRef.current.focus()
   };
+
+  const stopTimer = () => {
+    clearInterval(timerId.current)
+    timerId.current = 0
+  }
 
   const handleInputChange = (e) => {
     setRandomInput(e.target.value);
