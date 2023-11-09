@@ -15,6 +15,7 @@ const App = () => {
 
     renders.current++
   }
+  const focus
 
   return(
     <main className="App">
@@ -24,6 +25,7 @@ const App = () => {
       type="text" 
       value={randomInput}
       placeholder='Type anything...'
+      onChange={handleInputChange}
       />
       <p>Renders: {randomInput}</p>
 
