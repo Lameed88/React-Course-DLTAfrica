@@ -28,14 +28,14 @@ const App = () => {
   const resetTimer = () => {
    stopTimer()
    if (Seconds) {
-    render.current = 0
+    renders.current++
     setSeconds(0)
    }
    inputRef.current.focus
 
   }
 
-  
+
   const handleInputChange = (e) => {
     setRandomInput(e.target.value);
 
