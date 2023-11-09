@@ -17,7 +17,7 @@ const App = () => {
       placeholder='Type anything...'
       onChange={(e) => setRandomInput(e.target.value)}
       />
-      <p>Result: {randomInput}</p>
+      <p>Renders: {randomInput}</p>
 
     </main>
   )
