@@ -8,6 +8,8 @@ const App = () => {
 
   const renders = useRef(0);
 
+  const handleInputChange
+
 
   return(
     <main className="App">
