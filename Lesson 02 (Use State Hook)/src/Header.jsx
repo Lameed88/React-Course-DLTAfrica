@@ -8,7 +8,7 @@ const Header = () => {
     //     padding: "1px 20px"
     // }
 
-    
+
     return (
         <header>
             <h1>WELCOME TO REACT IN DETAILS</h1>
@@ -16,5 +16,6 @@ const Header = () => {
         </header>
     )
 }
+
 
 export default Header
