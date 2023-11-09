@@ -10,6 +10,7 @@ const Content = () => {
            setName(names[int])
     }
 
+
     const handleClick = () => {
         console.log("You clicked it");
     }
