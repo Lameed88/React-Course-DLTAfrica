@@ -34,6 +34,7 @@ const App = () => {
       <br />
       <br />
       <section>
+        <button onClick={focusOnInput}>Focus</button>
         <button>Stop</button>
         <button>Start</button>
       </section>
