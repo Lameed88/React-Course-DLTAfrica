@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 const Footer = () => {
     const today = new Date()
   return (
@@ -10,5 +11,7 @@ const Footer = () => {
     </footer>
   )
 }
+
+
 
 export default Footer
