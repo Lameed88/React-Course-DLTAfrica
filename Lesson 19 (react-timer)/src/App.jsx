@@ -25,10 +25,8 @@ const App = () => {
   }
 
   const resetTimer = () => {
-    clearInterval(timerId.current)
-    timerId.current = 0
-    setSeconds(0)
-    
+   stopTimer()
+
 
   }
 
@@ -61,7 +59,7 @@ const App = () => {
         <button onClick={startTimer}>Start</button>
       </section>
 
-      <button>Reset</button>
+      <button onClick={resetTimer}>Reset</button>
 
       <br />
       <br />
