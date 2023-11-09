@@ -27,7 +27,6 @@ const App = () => {
 
 
 
-
   return(
     <main className="App">
       <label htmlFor="">Fibonacci Sequence</label>
