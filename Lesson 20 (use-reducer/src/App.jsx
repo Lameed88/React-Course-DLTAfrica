@@ -1,7 +1,11 @@
 import { useState, useRef } from "react";
-import { render } from "react-dom";
+
 
 const App = () => {
+
+  const [useInput, setUseInput] = useState('')
+  const [count, setCount] = useState(0)
+  const [color, setColor] = useState(false)
   
   return (
     <main className="App">
