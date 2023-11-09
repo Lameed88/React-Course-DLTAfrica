@@ -11,13 +11,7 @@ const App = () => {
 
   return(
     <main className="App">
-      <label htmlFor="">Fibonacci Sequence</label>
-      <input type="text" placeholder="position" value={userInput} onChange={(e) => setUserInput(e.target.value)}/>
-
-     
-      <p>Number: {fibNumber || "no number added yet"}</p>
-      <br />
-      <br />
+   
 
 
       <label htmlFor="">Random Input:</label>
