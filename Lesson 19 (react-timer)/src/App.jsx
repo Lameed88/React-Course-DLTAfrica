@@ -48,7 +48,7 @@ const App = () => {
       <br />
 
       <section>
-        <button>Stop</button>
+        <button onClick={stopTimer}>Stop</button>
         <button onClick={startTimer}>Start</button>
       </section>
 
