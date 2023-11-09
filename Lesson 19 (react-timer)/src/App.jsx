@@ -1,50 +1,47 @@
 import { useState, useRef } from "react";
 
-
-
 const App = () => {
   const [randomInput, setRandomInput] = useState("");
-  const [seconds, setSeconds] = useState("0");
+  const [Seconds, setSeconds] = useState(0);
 
   const renders = useRef(0);
 
-  const inputRef = useRef()
+  const inputRef = useRef();
 
-  const timerId = useRef()
+  const timerId = useRef();
 
-  const startTimer = () => 
-  timerId.current = setInterval(() => {
-    renders.current++;
-    setSeconds(prev => prev + 1 )
-  }, 1000)
-}
-
+  const startTimer = () => {
+    timerId.current = setInterval(() => {
+      renders.current++;
+      setSeconds((prev) => prev + 1);
+    }, 1000);
+  };
 
   const handleInputChange = (e) => {
-    setRandomInput(e.targetvalue);
+    setRandomInput(e.target.value);
 
-    renders.current++
-  }
-  const focusOnInput = () => {
-    inputRef.current.focus()
-  }
+    renders.current++;
+  };
 
-  return(
+  //const focusOnInput = () =>{
+  //inputRef.current.focus()
+  // }
+
+  return (
     <main className="App">
-  
-      <input 
-      ref={inputRef}
-      type="text" 
-      value={randomInput}
-      placeholder='Type anything...'
-      onChange={handleInputChange}
+      <input
+        ref={inputRef}
+        onChange={handleInputChange}
+        type="text"
+        value={randomInput}
+        placeholder="Type anything"
       />
       <p>Renders: {renders.current}</p>
 
       <br />
       <br />
+
       <section>
-        <button onClick={focusOnInput}>Focus</button>
         <button>Stop</button>
         <button onClick={startTimer}>Start</button>
       </section>
@@ -54,16 +51,14 @@ const App = () => {
       <br />
       <br />
 
-      <p>Seconds:</p>
+      <p>Seconds: {Seconds}</p>
 
       <br />
       <br />
+
       <p>{randomInput}</p>
-
     </main>
-  )
-
-
-
+  );
+};
 
 export default App;
