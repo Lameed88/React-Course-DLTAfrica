@@ -8,13 +8,14 @@ const App = () => {
   const [color, setColor] = useState(false)
   
   return (
-    <main className="App" style={{{color: color ? '#fff' : '#fff92'}}}>
+    <main className="App" style={{color: color ? '#fff' : '#fff92'}}>
       <input
     
-        onChange={handleInputChange}
+       
         type="text"
         value={randomInput}
-        placeholder="Type anything"
+        onChange={handleInputChange}
+
       />
       <p>Renders: {renders.current}</p>
 
