@@ -39,7 +39,7 @@ const App = () => {
       <br />
 
       <label htmlFor="">Random Input:</label>
-      <h1>output:{userInput || ".."}</h1>
+      
     </main>
   )
 
