@@ -14,17 +14,19 @@ const App = () => {
        
         type="text"
         value={randomInput}
-        onChange={handleInputChange}
+        onChange={(e) => setUserInput (e.target.value)}
 
       />
-      <p>Renders: {renders.current}</p>
+     
 
       <br />
       <br />
+
+      <p>Count</p>
 
       <section>
-        <button onClick={stopTimer}>Stop</button>
-        <button onClick={startTimer}>Start</button>
+        <button onClick={setCount(prev => prev-1 )}>Stop</button>
+       
       </section>
 
       <button onClick={resetTimer}>Reset</button>
