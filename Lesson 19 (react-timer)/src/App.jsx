@@ -15,7 +15,9 @@ const App = () => {
   const startTimer = () => 
   timerId.current = setInterval(() => {
     renders.current++;
-  })
+    setSeconds(prev => prev + 1 )
+  }, 1000)
+}
 
 
   const handleInputChange = (e) => {
