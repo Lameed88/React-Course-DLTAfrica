@@ -23,9 +23,9 @@ const Register = () => {
   const [validPwd, setValidPwd] = useState(false);
   const [pwdFocus, setPwdFocus] = useState(false);
 
-  const [matchPwd, setMatchPwd] = useState("")
-  const [validMatch, setValidMatch] = useState(false)
-  const [matchFocus, setMatchFocus] = useState(false)
+  const [matchPwd, setMatchPwd] = useState("");
+  const [validMatch, setValidMatch] = useState(false);
+  const [matchFocus, setMatchFocus] = useState(false);
 
   const [errMsg, setErrMsg] = useState("");
   const [success, setSuccess] = useState(false);
@@ -43,54 +43,84 @@ const Register = () => {
   }, [pwd, matchPwd]);
 
   useEffect(() => {
-    setErrMsg("")
+    setErrMsg("");
   }, [user, pwd, matchPwd]);
 
   return (
     <>
-    <p ref={errRef} className= {errMsg ? "errmsg" : "offscreen"} aria-live="assertive">  
-    {errMsg} </p>
+      <p
+        ref={errRef}
+        className={errMsg ? "errmsg" : "offscreen"}
+        aria-live="assertive"
+      >
+        {errMsg}{" "}
+      </p>
       <form action="">
         <label htmlFor="username">
-            Username:
-            <FontAwesomeIcon icon= {faCheck} className={validMatch && matchPwd ? "valid" : 'hide'}/>
-            <FontAwesomeIcon icon= {faTimes} className={validMatch || matchPwd ? "hide" : 'invalid'}/>
+          Username:
+          <FontAwesomeIcon
+            icon={faCheck}
+            className={validMatch && matchPwd ? "valid" : "hide"}
+          />
+          <FontAwesomeIcon
+            icon={faTimes}
+            className={validMatch || matchPwd ? "hide" : "invalid"}
+          />
         </label>
-        <input type="text" 
-        id="username"
-        ref={userRef}
-        autoComplete="off"
-        onChange={(e) => setUser(e.target.value)}
-        value={user}
-        required
-        aria-invalid={validName ? "false" : "true"}
-        aria-describedby= "uidnote"
-        onFocus={() => setUserFocus(true)}
-        onBlur={() => setUserFocus(false)}
+        <input
+          type="text"
+          id="username"
+          ref={userRef}
+          autoComplete="off"
+          onChange={(e) => setUser(e.target.value)}
+          value={user}
+          required
+          aria-invalid={validName ? "false" : "true"}
+          aria-describedby="uidnote"
+          onFocus={() => setUserFocus(true)}
+          onBlur={() => setUserFocus(false)}
         />
-        <p id= "uidnote" className={userFocus && user && !validName ? "instruction" : 
-        "offscreen"}>
-            <FontAwesomeIcon icon={faInfoCircle} />
-            3 to 23 characters. <br />
-            must begin with a <br />
-            letter, number, underscore, hyphens Allowed
-
+        <p
+          id="uidnote"
+          className={
+            userFocus && user && !validName ? "instruction" : "offscreen"
+          }
+        >
+          <FontAwesomeIcon icon={faInfoCircle} />
+          3 to 23 characters. <br />
+          must begin with a <br />
+          letter, number, underscore, hyphens Allowed
         </p>
-
         <label htmlFor="password">
-            Password:
-            <FontAwesomeIcon icon= {faCheck} className={validPwd && matchPwd ? "valid" : 'hide'}/>
-            <FontAwesomeIcon icon= {faTimes} className={validMatch || matchPwd ? "hide" : 'invalid'}/>
+          Password:
+          <FontAwesomeIcon
+            icon={faCheck}
+            className={validPwd ? "valid" : "hide"}
+          />
+          <FontAwesomeIcon
+            icon={faTimes}
+            className={validPwd || !pwd ? "hide" : "invalid"}
+          />
+          
         </label>
-       
-        8 to 24 characters. <br /> Must include UpperCase and LowerCase Letters, special character and a number. <br /> Allowed special character:
+        <input
+          type="password"
+          id="passwrd"
+          onChange={(e) => setPwd(e.target.value)}
+          value={pwd}
+          required
+          aria-invalid={validPwd ? "false" : "true"}
+          aria-describedby="uidnote"
+          onFocus={() => setPwdFocus(true)}
+          onBlur={() => setPwdFocus(false)}
+        />
 
+        <FontAwesomeIcon icon={faInfoCircle} />
+        8 to 24 characters. <br /> Must include UpperCase and LowerCase Letters,
+        special character and a number. <br /> Allowed special character:
       </form>
-
-
-
-      </>
-  )
+    </>
+  );
 };
 
 export default Register;
