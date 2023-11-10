@@ -14,6 +14,8 @@ const Register = () => {
     const errRef = useRef()
 
     const [user, setUser] = useState('')
+    const [validName, setValidName] = useState(false)
+    
   return (
     <div>Register</div>
   )
