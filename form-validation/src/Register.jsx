@@ -55,8 +55,13 @@ const Register = () => {
             Username:
             <FontAwesomeIcon icon= {faCheck} className={validMatch && matchPwd ? "valid" : 'hide'}/>
             <FontAwesomeIcon icon= {faTimes} className={validMatch || matchPwd ? "hide" : 'invalid'}/>
-
         </label>
+        <input type="text" />
+        id="username"
+        ref={userRef}
+        onChange={(e) => setPwd(e.target.value)}
+        value={user}
+        placeholder
 
       </form>
 
