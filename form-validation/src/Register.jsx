@@ -46,7 +46,20 @@ const Register = () => {
     setErrMsg("")
   }, [user, pwd, matchPwd]);
 
-  return <div>Register</div>;
+  return (
+    <>
+    <p ref={errRef} className= {errMsg ? "errmsg" : "offscreen"} aria-live="assertive">  
+    {errMsg} </p>
+      <form action="">
+        <label htmlFor="username">
+            Username:
+            <FontAwesomeIcon icon= {faCheck} className={validMatch && matchPwd ? "valid" : 'hide'}/>
+        </label>
+
+      </form>
+
+      </>
+  )
 };
 
 export default Register;
