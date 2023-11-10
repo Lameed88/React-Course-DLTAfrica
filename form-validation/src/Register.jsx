@@ -12,6 +12,8 @@ const REGISTER_URL = "/Register"
 const Register = () => {
     const userRef = useRef()
     const errRef = useRef()
+
+    const [user, setUser] = useState('')
   return (
     <div>Register</div>
   )
