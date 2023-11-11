@@ -5,7 +5,7 @@ import {
   faInfoCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import axios from "./api/axios";
+import axios from "axios";
 
 const USER_REGEX = /^[A-Z][a-z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
@@ -31,12 +31,12 @@ const Register = () => {
   const [success, setSuccess] = useState(false);
 
   useEffect(() => {
-    useRef.current.focus;
+    userRef.current.focus;
   }, []);
 
   useEffect(() => {
     setValidName(USER_REGEX.test(user));
-  }, [test]);
+  }, [user]);
 
   useEffect(() => {
     setValidPwd(PWD_REGEX.test(pwd));
@@ -67,6 +67,7 @@ const Register = () => {
             className={validMatch || matchPwd ? "hide" : "invalid"}
           />
         </label>
+        
         <input
           type="text"
           id="username"
@@ -78,12 +79,12 @@ const Register = () => {
           aria-invalid={validName ? "false" : "true"}
           aria-describedby="uidnote"
           onFocus={() => setUserFocus(true)}
-          onBlur={() => setUserFocus(false)}
+          onBlur={() => setUserFocus(false)}D  
         />
         <p
           id="uidnote"
           className={
-            userFocus && user && !validName ? "instruction" : "offscreen"
+            userFocus && user && !validName ? "instructions" : "offscreen"
           }
         >
           <FontAwesomeIcon icon={faInfoCircle} />
@@ -101,7 +102,7 @@ const Register = () => {
             icon={faTimes}
             className={validPwd || !pwd ? "hide" : "invalid"}
           />
-          
+
         </label>
         <input
           type="password"
@@ -114,10 +115,23 @@ const Register = () => {
           onFocus={() => setPwdFocus(true)}
           onBlur={() => setPwdFocus(false)}
         />
-
-        <FontAwesomeIcon icon={faInfoCircle} />
-        8 to 24 characters. <br /> Must include UpperCase and LowerCase Letters,
-        special character and a number. <br /> Allowed special character:
+        
+        <p
+          id="pwdnote"
+          className={pwdFocus && !validPwd ? "instructions" : "offscreen"}
+        >
+          <FontAwesomeIcon icon={faInfoCircle} />
+          8 to 24 characters <br />
+          Must include Uppercase and LowerCase Letters, a number and a special
+          character <br />
+          Allowed special character:<span aria-label="exclamation mark">
+            !
+          </span>{" "}
+          <span aria-label="at symbol">@</span>{" "}
+          <span aria-label="hashtag">#</span>{" "}
+          <span aria-label="dollar sign">$</span>{" "}
+          <span aria-label="percent">%</span>
+        </p>
       </form>
     </>
   );
