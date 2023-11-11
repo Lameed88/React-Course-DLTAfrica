@@ -70,6 +70,7 @@ const Register = () => {
 
 
 
+
         <input
           type="text"
           id="username"
