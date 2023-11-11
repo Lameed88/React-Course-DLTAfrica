@@ -69,7 +69,8 @@ const Register = () => {
         </label>
     
 
-    
+
+
 
         <input
           type="text"
