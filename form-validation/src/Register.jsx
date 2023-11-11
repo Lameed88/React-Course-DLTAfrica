@@ -67,10 +67,6 @@ const Register = () => {
             className={validMatch || matchPwd ? "hide" : "invalid"}
           />
         </label>
-    
-
-
-
 
         <input
           type="text"
