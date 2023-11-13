@@ -150,7 +150,7 @@ const Register = () => {
         aria-invalid={validMatch ? "false" : "true"}
         aria-describedby="confirmnote"
         onFocus={() => setMatchFocus(true) }
-        onBlur={() => setMatchFocus(false) }
+        onBlur={() => setPwdFocus(false) }
         />
         <p id="confirmnote" className={matchFocus && !validMatch ? "instructions" : 
         "offscreen"}>
