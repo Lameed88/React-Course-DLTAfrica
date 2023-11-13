@@ -15,10 +15,12 @@ html {
 body {
   min-height: 100vh;
   /* background-color: rgb(146, 207, 130); */
-  background-image: url(/public/grass.jpg);
-  background-size: cover;
+  background-image: url(/public/bottle-2032980_1280.jpg);
+  background-size: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  background-position: center;
+
 }
 
 .App {
