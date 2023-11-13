@@ -14,7 +14,11 @@ html {
 
 body {
   min-height: 100vh;
-  background-color: rgb(146, 207, 130);
+  /* background-color: rgb(146, 207, 130); */
+  background-image: url(/public/grass.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 .App {
