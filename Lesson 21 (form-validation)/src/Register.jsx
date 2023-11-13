@@ -81,7 +81,7 @@ const Register = () => {
           aria-describedby="uidnote"
           onFocus={() => setUserFocus(true)}
           onBlur={() => setUserFocus(false)}
-          D
+          
         />
         <p
           id="uidnote"
@@ -150,7 +150,8 @@ const Register = () => {
         onFocus={() => setMatchFocus(true) }
         onBlur={() => setMatchFocus(false) }
         />
-        <p id="confirmnote" className={matchFocus && !validMatch ? "instruction" : "offscreen"}>
+        <p id="confirmnote" className={matchFocus && !validMatch ? "instructions" : 
+        "offscreen"}>
           <FontAwesomeIcon icon={faInfoCircle} />
           Must match the first password input field.
         </p>
