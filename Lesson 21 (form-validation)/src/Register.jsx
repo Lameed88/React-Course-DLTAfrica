@@ -67,6 +67,7 @@ const Register = () => {
 
   return (
     <>
+    {success ? (
     <section>
     <h1>Register</h1>
       <p
