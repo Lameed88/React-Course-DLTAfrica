@@ -76,6 +76,7 @@ const Register = () => {
           <a href="#">Sign In </a>
         </p>
       </section>
+    ):(
     <section>
     <h1>Register</h1>
       <p
