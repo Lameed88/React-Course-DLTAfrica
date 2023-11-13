@@ -15,6 +15,7 @@ const Register = () => {
   const userRef = useRef();
   const errRef = useRef();
 
+
   const [user, setUser] = useState("");
   const [validName, setValidName] = useState(false);
   const [userFocus, setUserFocus] = useState(false);
@@ -50,6 +51,8 @@ const Register = () => {
   
   const handleSubmit = async (e) => {
     e.preventDefault()
+
+
     //if button enabled with JS hack
     const v1 = USER_REGEX.test(user)
     const v2 = PWD_REGEX.test(pwd)
