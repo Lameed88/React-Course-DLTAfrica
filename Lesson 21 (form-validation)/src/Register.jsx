@@ -68,6 +68,14 @@ const Register = () => {
   return (
     <>
     {success ? (
+      <section>
+        <h1>
+          Success!
+        </h1>
+        <p>
+          <a href="#">Sign In </a>
+        </p>
+      </section>
     <section>
     <h1>Register</h1>
       <p
@@ -191,6 +199,7 @@ const Register = () => {
         </span>
       </p>
       </section>
+    )}
     </>
   );
 };
