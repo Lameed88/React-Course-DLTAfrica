@@ -47,18 +47,38 @@ const Register = () => {
   useEffect(() => {
     setErrMsg("");
   }, [user, pwd, matchPwd]);
+  
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    //if button enabled with JS hack
+    const v1 = USER_REGEX.test(user)
+    const v2 = USER_REGEX.test(pwd)
+    if (!v1 || !v2) {
+      setErrMsg("Invalid Entry")
+      return
+    }
+    console.log(user, pwd);
+    setSuccess(true)
+    //clear state and controlinputs
+    setUser('')
+    setPwd('')
+    setMatchPwd('')
+  }
 
   return (
     <>
     <section>
+    <h1>Register</h1>
       <p
         ref={errRef}
         className={errMsg ? "errmsg" : "offscreen"}
         aria-live="assertive"
       >
+       
+
         {errMsg}{" "}
       </p>
-      <form action="">
+      <form onSubmit={handleSubmit}>
         <label htmlFor="username">
           Username:
           <FontAwesomeIcon
@@ -163,6 +183,12 @@ const Register = () => {
 
         </button>
       </form>
+      <p>
+        Already Registered? <br />
+        <span className="line">
+          <a href="#"> Sign In</a>
+        </span>
+      </p>
       </section>
     </>
   );
