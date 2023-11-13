@@ -104,6 +104,7 @@ const Register = () => {
             className={validPwd || !pwd ? "hide" : "invalid"}
           />
 
+
         </label>
         <input
           type="password"
