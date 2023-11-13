@@ -31,7 +31,7 @@ const Register = () => {
   const [errMsg, setErrMsg] = useState("");
   const [success, setSuccess] = useState(false);
 
-  
+
   useEffect(() => {
     userRef.current.focus;
   }, []);
@@ -139,5 +139,6 @@ const Register = () => {
     </>
   );
 };
+
 
 export default Register;
