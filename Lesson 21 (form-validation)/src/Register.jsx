@@ -7,7 +7,6 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
 
-
 const USER_REGEX = /^[A-Z][a-z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
 const REGISTER_URL = "/Register";
@@ -30,7 +29,6 @@ const Register = () => {
 
   const [errMsg, setErrMsg] = useState("");
   const [success, setSuccess] = useState(false);
-
 
   useEffect(() => {
     userRef.current.focus;
@@ -62,11 +60,11 @@ const Register = () => {
           Username:
           <FontAwesomeIcon
             icon={faCheck}
-            className={validMatch && matchPwd ? "valid" : "hide"}
+            className={validName? "valid" : "hide"}
           />
           <FontAwesomeIcon
             icon={faTimes}
-            className={validMatch || matchPwd ? "hide" : "invalid"}
+            className={validName || !user ? "hide" : "invalid"}
           />
         </label>
 
@@ -81,7 +79,8 @@ const Register = () => {
           aria-invalid={validName ? "false" : "true"}
           aria-describedby="uidnote"
           onFocus={() => setUserFocus(true)}
-          onBlur={() => setUserFocus(false)}D  
+          onBlur={() => setUserFocus(false)}
+          D
         />
         <p
           id="uidnote"
@@ -104,8 +103,6 @@ const Register = () => {
             icon={faTimes}
             className={validPwd || !pwd ? "hide" : "invalid"}
           />
-
-
         </label>
         <input
           type="password"
@@ -118,7 +115,7 @@ const Register = () => {
           onFocus={() => setPwdFocus(true)}
           onBlur={() => setPwdFocus(false)}
         />
-        
+
         <p
           id="pwdnote"
           className={pwdFocus && !validPwd ? "instructions" : "offscreen"}
@@ -135,10 +132,14 @@ const Register = () => {
           <span aria-label="dollar sign">$</span>{" "}
           <span aria-label="percent">%</span>
         </p>
+
+        <label htmlFor="confirm_pwd">
+          Confirm Password:
+          <FontAwesomeIcon icon={faCheck} className={validMatch && matchPwd ? "valid" : "hide" }
+        </label>
       </form>
     </>
   );
 };
-
 
 export default Register;
