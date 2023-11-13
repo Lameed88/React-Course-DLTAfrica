@@ -31,7 +31,7 @@ const Register = () => {
   const [errMsg, setErrMsg] = useState("");
   const [success, setSuccess] = useState(false);
 
-  
+
   useEffect(() => {
     userRef.current.focus;
   }, []);
@@ -69,7 +69,6 @@ const Register = () => {
             className={validMatch || matchPwd ? "hide" : "invalid"}
           />
         </label>
-
 
         <input
           type="text"
