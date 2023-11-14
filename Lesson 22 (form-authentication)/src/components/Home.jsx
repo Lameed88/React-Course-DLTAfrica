@@ -17,7 +17,7 @@ const Home = () => {
     <Link to='/linkpage'>Go to the Link Page</Link>
     <div className='flexGrow'>
       <button>
-        Sign <Out></Out>
+        Sign Out
       </button>
 
     </div>
