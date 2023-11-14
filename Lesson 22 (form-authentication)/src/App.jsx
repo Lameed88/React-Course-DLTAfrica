@@ -27,6 +27,9 @@ const App = () => {
         <Route path="/Unauthorized" element={<Unauthorized />} />
 
         {/* private Routes */}
+        <Route>
+          
+        </Route>
         <Route path="/" element={<Home />} />
         <Route path="editor" element={<Editor />} />
         <Route path="admin" element={<Admin />} />
