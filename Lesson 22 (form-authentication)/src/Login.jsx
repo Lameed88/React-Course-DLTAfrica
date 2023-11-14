@@ -24,6 +24,12 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    try {
+        
+    } catch (error) {
+        
+    }
     // if(!username || !password) {
     //     setErrMsg('Invalid Entry');
     //     return;
