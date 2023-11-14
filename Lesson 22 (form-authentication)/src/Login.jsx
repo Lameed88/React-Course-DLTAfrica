@@ -24,10 +24,10 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if(!username || !password) {
-        setErrMsg('Invalid Entry');
-        return;
-      }
+    // if(!username || !password) {
+    //     setErrMsg('Invalid Entry');
+    //     return;
+    //   }
 
     setSuccess(true);
     console.log(username,  password);
