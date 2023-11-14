@@ -98,7 +98,7 @@ const Login = () => {
               />
             </label>
 
-            <button>Sign Up</button>
+            <button>Sign In</button>
           </form>
           <p>
             Need an Account? <br />
