@@ -10,7 +10,7 @@ const Login = () => {
   const errRef = useRef();
 
   const [user, setUser] = useState("");
-  const [password, setPassword] = useState("");
+  const [pwd, setPwd] = useState("");
   const [errMsg, setErrMsg] = useState("");
   const [success, setSuccess] = useState(false);
 
@@ -20,7 +20,7 @@ const Login = () => {
 
   useEffect(() => {
     setErrMsg("");
-  }, [user, password]);
+  }, [user, pwd]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -30,16 +30,16 @@ const Login = () => {
     //   const response = await axios.post(LOGIN_URL, JSON.stringify((user, pwd)));
       setSuccess(true);
       setUser("");
-      setPassword("");
+      setPwd("");
     } catch (err) {
 
     }
-    // if(!username || !password) {
+    // if(!username || !pwd) {
     //     setErrMsg('Invalid Entry');
     //     return;
     //   }
 
-    console.log(user, password);
+    console.log(user, pwd);
  
   };
 
@@ -78,7 +78,7 @@ const Login = () => {
               <input
                 type="password"
                 id="password"
-                onChange={(e) => setPassword(e.target.value)}
+                onChange={(e) => setPwd(e.target.value)}
                 value={password}
                 required
               />
