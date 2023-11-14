@@ -28,16 +28,15 @@ const App = () => {
         <Route path="/Unauthorized" element={<Unauthorized />} />
 
         {/* private Routes */}
-        <Route>
-
-        </Route>
+        
         <Route element={<RequireAuth allowedRoles={[ROLES.User]}/>}>
         <Route path="/" element={<Home />} />
           </Route>
+
           <Route element={<RequireAuth allowedRoles={[ROLES.Editor]}/>}>
         <Route path="editor" element={<Editor />} />
         </Route>
-        
+
         <Route element={<RequireAuth allowedRoles={[ROLES.Admin]}/>}>
         <Route path="admin" element={<Admin />} />
         </Route>
