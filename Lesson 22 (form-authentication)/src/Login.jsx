@@ -27,7 +27,6 @@ const Login = () => {
 
     try {
 
-    //   const response = await axios.post(LOGIN_URL, JSON.stringify((user, pwd)));
       setSuccess(true);
       setUser("");
       setPwd("");
@@ -77,9 +76,9 @@ const Login = () => {
               Password
               <input
                 type="password"
-                id="password"
+                id="pwd"
                 onChange={(e) => setPwd(e.target.value)}
-                value={password}
+                value={pwd}
                 required
               />
             </label>
