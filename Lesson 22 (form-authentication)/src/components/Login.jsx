@@ -63,7 +63,7 @@ const Login = () => {
         <section>
           <h1>You have successfully Login</h1>
           <p>
-            <a href="home">Home </a>
+            <a href="/">Home </a>
           </p>
         </section>
       ) : (
