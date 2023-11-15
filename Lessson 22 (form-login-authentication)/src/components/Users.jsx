@@ -11,8 +11,11 @@ const Users = () => {
     const getUsers = async () => {
         try {
             const response = await axios.get('/users', {
-                signal
+                signal: controller.signal
+
             })
+            console.log(response.data);
+            isMounted && setUsers
         } catch (err) {
             console.error(err);
         }
