@@ -10,7 +10,7 @@ const Users = () => {
 
     const getUsers = async () => {
         try {
-            
+            const response = await
         } catch (err) {
             console.error(err);
         }
