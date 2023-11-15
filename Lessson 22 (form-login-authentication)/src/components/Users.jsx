@@ -7,7 +7,9 @@ const Users = () => {
   useEffect(() => {
     let isMounted = true;
     const controller = new AbortController()
-    
+
+    const getUsers = async () => 
+
   }, [])
 
   return (
