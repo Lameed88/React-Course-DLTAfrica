@@ -10,7 +10,9 @@ const Users = () => {
 
     const getUsers = async () => {
         try {
-            const response = await
+            const response = await axios.get('/users', {
+                signal
+            })
         } catch (err) {
             console.error(err);
         }
