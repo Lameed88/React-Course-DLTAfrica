@@ -11,7 +11,6 @@ const Users = () => {
     const getUsers = async () => {
         try {
             const response = await axios.get('/users', {
-                signal: controller.signal
 
             })
             console.log(response.data);
@@ -20,7 +19,13 @@ const Users = () => {
             console.error(err);
         }
     }
-    
+     getUsers()
+     return() => {
+        isMounted = false
+        controller.abort()
+
+    }
+
 
   }, [])
 
