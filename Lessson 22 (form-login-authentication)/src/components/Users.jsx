@@ -8,7 +8,13 @@ const Users = () => {
     let isMounted = true;
     const controller = new AbortController()
 
-    const getUsers = async () => 
+    const getUsers = async () => {
+        try {
+            
+        } catch (err) {
+            console.error(err);
+        }
+    }
 
   }, [])
 
