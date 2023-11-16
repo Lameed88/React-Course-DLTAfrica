@@ -62,6 +62,14 @@ function Login() {
     
    };
 
+   const togglePersist = () => {
+      setPersist(prev => !prev)
+   }
+
+   useEffect(() => {
+      localStorage.setItem('persist', persist)
+   }, [persist])
+
    return (
       
             <section>
