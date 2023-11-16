@@ -1,16 +1,16 @@
-import { Outlet, json } from "react-router-dom"
+import { Outlet } from "react-router-dom"
 import { useState, useEffect } from "react"
 import useRefreshToken from "../hooks/useRefreshToken "
 import useAuth from "../hooks/useAuth"
 
 const PersistLogin = () => {
-    const [isLoading, setisLoading] = useState(true)
+    const [isLoading, setIsLoading] = useState(true)
     const refresh = useRefreshToken()
 
     const { auth } = useAuth();
 
     useEffect(() => {
-    let isMounted = true
+    // let isMounted = true
 
         const verifyRefreshToken = async () => {
             try {
@@ -19,17 +19,17 @@ const PersistLogin = () => {
                 console.log(error);
                 
             }finally{
-                setisLoading(false)
+                setIsLoading(false)
             }
         }
-        !auth?.accessToken ? verifyRefreshToken() : setisLoading()
+        !auth?.accessToken ? verifyRefreshToken() : setIsLoading(false)
 
-        return() => isMounted = false
+        // return() => isMounted = false
     }, [])
 
     useEffect(() => {
-        console.log(`isLoading: ${loaing}`);
-        console.log(`aT: ${json.stringify(auth?. accessToken)}`);
+        console.log(`isLoading: ${isLoading}`);
+        console.log(`aT: ${JSON.stringify(auth?.accessToken)}`);
     }, [isLoading])
 
     return (
