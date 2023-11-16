@@ -20,6 +20,7 @@ const PersistLogin = () => {
                 setisLoading(false)
             }
         }
+        !auth?.accessToken ? verifyRefreshToken() : setisLoading()
     })
 }
 
