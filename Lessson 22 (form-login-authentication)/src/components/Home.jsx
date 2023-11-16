@@ -13,6 +13,7 @@ const Home = () => {
         navigate('/linkpage');
     }
 
+
     
     return (
         <section>
