@@ -52,6 +52,7 @@ const App = () => {
         <Route path="*" element={<Missing />} />
       </Route>
     </Routes>
+    
   );
 };
 
