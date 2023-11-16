@@ -45,7 +45,6 @@ const App = () => {
             <Route element={<RequireAuth allowedRoles={[ROLES.Editor, ROLES.Admin]}/>}>
                 <Route path="lounge" element={<Lounge />} />
             </Route>
-        
         </Route>
         
         {/* to catch all error */}
