@@ -23,8 +23,9 @@ const PersistLogin = () => {
             }
         }
         !auth?.accessToken ? verifyRefreshToken() : setisLoading()
-        return() => isMounted
-    })
+
+        return() => isMounted = false
+    }, [])
 
 }
 
