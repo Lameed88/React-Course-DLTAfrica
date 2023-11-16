@@ -16,6 +16,8 @@ const PersistLogin = () => {
             } catch (error) {
                 console.log(error);
                 
+            }finally{
+                setisLoading(false)
             }
         }
     })
