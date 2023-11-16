@@ -27,7 +27,9 @@ const PersistLogin = () => {
         return() => isMounted = false
     }, [])
 
-    useEffect(() => )
+    useEffect(() => {
+        console.log(`isLoading: ${loaing}`);
+    })
 
 }
 
