@@ -28,7 +28,7 @@ const App = () => {
         <Route path="/linkpage" element={<LinkPage />} />
         <Route path="/Unauthorized" element={<Unauthorized />} />
         {/* private Routes */}
-        >Route element={PersistLogin}
+        >Route element={PersistLogin />}>
         <Route
           element={
             <RequireAuth
@@ -49,7 +49,7 @@ const App = () => {
         >
           <Route path="lounge" element={<Lounge />} />
         </Route>
-        </Route>
+      
         {/* to catch all error */}
         <Route path="*" element={<Missing />} />
       </Route>
