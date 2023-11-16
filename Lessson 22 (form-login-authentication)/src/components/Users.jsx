@@ -13,6 +13,7 @@ const Users = () => {
     let isMounted = true;
     const controller = new AbortController();
 
+    
     const getUsers = async () => {
       try {
         const response = await axiosPrivate.get("/users", {
