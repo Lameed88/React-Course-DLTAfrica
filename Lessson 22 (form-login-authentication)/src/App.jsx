@@ -48,11 +48,12 @@ const App = () => {
         
         </Route>
         
+        
         {/* to catch all error */}
         <Route path="*" element={<Missing />} />
       </Route>
     </Routes>
-    
+
   );
 };
 
