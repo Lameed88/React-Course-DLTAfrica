@@ -16,4 +16,5 @@ const Admin = () => {
     </section>
   )
 }
+
 export default Admin
