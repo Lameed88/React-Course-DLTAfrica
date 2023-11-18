@@ -22,7 +22,7 @@ function Login() {
    useEffect(() => {
       userRef.current.focus();
    }, []);
-
+ 
    useEffect(() => {
       setErrMsg("");
    }, [user, pwd]);
@@ -40,7 +40,7 @@ function Login() {
 
       setAuth({user, pwd, roles, accessToken})
 
-      
+
       setUser("");
       setPwd("");
       navigate(from, {replace: true})
