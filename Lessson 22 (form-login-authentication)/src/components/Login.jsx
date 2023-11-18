@@ -40,6 +40,7 @@ function Login() {
 
       setAuth({user, pwd, roles, accessToken})
 
+      
       setUser("");
       setPwd("");
       navigate(from, {replace: true})
@@ -93,7 +94,6 @@ function Login() {
                      required
                   />
              
-
                       <label>Password:</label>
                     <input
                      type="password"
