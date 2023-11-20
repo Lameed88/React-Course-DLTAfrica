@@ -22,8 +22,7 @@ function Login() {
    useEffect(() => {
       userRef.current.focus();
    }, []);
-           
-
+            
    useEffect(() => {
       setErrMsg("");
    }, [user, pwd]);
