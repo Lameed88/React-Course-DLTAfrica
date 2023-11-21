@@ -7,5 +7,5 @@ const Post = ({ post }) => {
         </article>
     )
 }
-         
+          
 export default Post
