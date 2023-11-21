@@ -40,6 +40,7 @@ const Posts = () => {
 
       <div className="row">
         <button onClick={handleSubmit}>Submit</button>
+        <button onClick={getData}>Re-request</button>
       </div>
 
       {loading && <p> loading...</p>}
@@ -55,9 +56,13 @@ const Posts = () => {
           ))}
         </ul>
       )}
-      {!loading && !error && posts?.length && posts?.data && <p>{}</p>}
-
-      {!loading && !error && !posts?.length && <p>No Post To Display 😔</p>}
+      {!loading && !error && posts?.data && (
+        <p>
+          userId: {posts.data?.userId}, title: {posts.data?.title}, body:{" "}
+          {posts.data?.body}
+        </p>
+      )}
+      {!loading && !error && !posts && <p>No Post to Display! 😞</p>}
     </article>
   );
 };
