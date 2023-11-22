@@ -5,6 +5,8 @@ import 'react-confirm-alert/src/react-confirm-alert.css'
 
 
 const Example1 = () => {
+  const [pageNum, setPageNum] = useState(1)
+  const { loading, isError, error, results, hasNextPae } = usePosts(pageNum)
    
   return (
     <>
