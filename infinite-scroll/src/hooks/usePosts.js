@@ -9,10 +9,8 @@ const usePosts = () => {
     const [isError, setIsError] = useState(false)
     const [hasNextPage, setHasNextPage] = useState(false)
 
-    
-  return (
-    <div>usePosts</div>
-  )
+
+  return  {loading, isError, error, results, hasNextPage}
 }
 
 export default usePosts
