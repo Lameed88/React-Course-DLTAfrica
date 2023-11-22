@@ -1,14 +1,14 @@
 import { useState, useRef, useCallback } from "react";
 import usePosts from "./hooks/usePosts";
 import { confirmAlert } from "react-confirm-alert";
-import 'react-confirm-alert/src/react-confirm-alert.css'
-
+import "react-confirm-alert/src/react-confirm-alert.css";
 
 const Example1 = () => {
-  const [pageNum, setPageNum] = useState(1)
-  const { loading, isError, error, results, hasNextPae } = usePosts(pageNum)
-  
-   
+  const [pageNum, setPageNum] = useState(1);
+  const { loading, isError, error, results, hasNextPae } = usePosts(pageNum);
+
+  if (isError) return <p>{error.message</p>
+
   return (
     <>
       <h1 id="top">
