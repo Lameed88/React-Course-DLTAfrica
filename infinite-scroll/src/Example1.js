@@ -15,7 +15,11 @@ const Example1 = () => {
   const lastPostRef = useCallback ((post) => {
     if (loading) return
 
-    if (intObserver.current)
+    if (intObserver.current) intObserver.current.disconnect()
+
+    intObserver.current = new IntersectionObserver((post) => {
+      if 
+    })
   })
 
   const content = results.map((post, i) =>{
