@@ -9,6 +9,7 @@ const usePosts = () => {
     const [isError, setIsError] = useState(false)
     const [hasNextPage, setHasNextPage] = useState(false)
 
+    
   return (
     <div>usePosts</div>
   )
