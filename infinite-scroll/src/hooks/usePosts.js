@@ -13,6 +13,8 @@ const usePosts = (pageNum = 1) => {
         setLoading(true)
         setIsError(false)
         setError({})
+
+        
     })
     
 
