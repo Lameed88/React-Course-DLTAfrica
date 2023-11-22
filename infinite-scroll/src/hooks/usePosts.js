@@ -9,7 +9,6 @@ const usePosts = () => {
     const [isError, setIsError] = useState(false)
     const [hasNextPage, setHasNextPage] = useState(false)
 
-
   return  {loading, isError, error, results, hasNextPage}
 };
 
