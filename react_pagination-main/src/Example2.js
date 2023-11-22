@@ -18,7 +18,7 @@ const Example2 = () => {
         keepPreviousData: true
     })
 
-     
+      
     if (isLoading) return <p>Loading Users...</p>
 
     if (isError) return <p>Error: {error.message}</p>
