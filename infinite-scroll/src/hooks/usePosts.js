@@ -10,7 +10,7 @@ const usePosts = (pageNum = 1) => {
     const [hasNextPage, setHasNextPage] = useState(false)
 
     useEffect(() => {
-        setLoading
+        setLoading(true)
     })
     
 
