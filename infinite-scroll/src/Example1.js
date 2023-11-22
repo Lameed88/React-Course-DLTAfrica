@@ -1,4 +1,9 @@
 import { useState, useRef, useCallback } from "react";
+import usePosts from "./hooks/usePosts";
+import { confirmAlert } from "react-confirm-alert";
+import 'react-confirm-alert/src/react-confirm-'
+
+
 const Example1 = () => {
   return (
     <>
