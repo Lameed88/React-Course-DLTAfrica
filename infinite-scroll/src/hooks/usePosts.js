@@ -11,6 +11,6 @@ const usePosts = () => {
 
 
   return  {loading, isError, error, results, hasNextPage}
-}
+};
 
 export default usePosts
