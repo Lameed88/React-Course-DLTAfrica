@@ -7,10 +7,10 @@ import Post from "./Post"
 const Example1 = () => {
   const [pageNum, setPageNum] = useState(1);
   const { loading, isError, error, results, hasNextPage } = usePosts(pageNum);
-
-  if (isError) return <p className="center">Error : {error.message}</p>;
-
   const intObserver = useRef()
+
+
+
 
   const lastPostRef = useCallback ((post) => {
     if (loading) return
@@ -21,9 +21,13 @@ const Example1 = () => {
       if (post [0]. isIntersecting && hasNextPage)
       console.log("we are near the last post");
     setPageNum(prev => prev + 1 )
-    })
-    if (post) int 
-  })
+    }) 
+
+    if (post) intObserver.current.observe(post)
+  },
+[loading, hasNextPage]
+)
+if (isError) return <p className="center">Error : {error.message}</p>;
 
   const content = results.map((post, i) =>{
     if (results.length === i + 1) {
