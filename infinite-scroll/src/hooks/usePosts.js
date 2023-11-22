@@ -11,6 +11,8 @@ const usePosts = (pageNum = 1) => {
 
     useEffect(() => {
         setLoading(true)
+        setIsError(false)
+        setError({})
     })
     
 
