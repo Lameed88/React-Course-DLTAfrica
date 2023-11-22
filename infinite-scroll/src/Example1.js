@@ -18,7 +18,8 @@ const Example1 = () => {
     if (intObserver.current) intObserver.current.disconnect()
 
     intObserver.current = new IntersectionObserver((post) => {
-      if 
+      if (post [0]. isIntersecting && hasNextPage)
+      console.log();
     })
   })
 
