@@ -4,4 +4,4 @@ export const api = axios.create({
     baseURL: 'https://jsonplaceholder.typicode.com/'
 })
 
-export const getPostsPage = async
+export const getPostsPage = async(pageParam = 1, Option)
