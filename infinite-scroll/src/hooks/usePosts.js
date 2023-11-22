@@ -20,9 +20,12 @@ const usePosts = (pageNum = 1) => {
         getPostsPage(pageNum, {signal})
         .then(data => {
             setResults (prev => [...prev, ...data])
+            setHasNextPage(Boolean(data.length))
+            setLoading(false)
+        })
+        .catch(e => {
             set
         })
-
 
     })
     
