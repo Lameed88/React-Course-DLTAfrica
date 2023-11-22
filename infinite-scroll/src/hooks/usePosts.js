@@ -19,7 +19,8 @@ const usePosts = (pageNum = 1) => {
 
         getPostsPage(pageNum, {signal})
         .then(data => {
-            setResults (prev => )
+            setResults (prev => [...prev, ...data])
+            set
         })
 
 
