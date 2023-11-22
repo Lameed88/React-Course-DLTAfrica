@@ -62,7 +62,6 @@ if (status === 'error') return <p className="center">Error : {error.message}</p>
   })
   
   
-
   return (
     <>
       <h1 id="top">
