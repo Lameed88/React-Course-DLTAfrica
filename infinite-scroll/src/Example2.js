@@ -7,12 +7,16 @@ import { getPostsPage } from "./api/axios";
 
 const Example2 = () => {
     const {fetchNextPage, hasNextPage, isFetchingNextPage, data, status, error} =
-    useInfiniteQuery()
+    useInfiniteQuery('/posts', ({pageParam = 1}) => getPostsPage(pageParam), {
+        getNextPageParam: (lastPage, allPages) => {
+            return lastPage.;length ? allPages.length + 1: undefined
+        }
+    })
     
   const intObserver = useRef()
 
   const lastPostRef = useCallback ((post) => {
-    if (loading) return
+    if (isFetchingNextPage) return
 
     if (intObserver.current) intObserver.current.disconnect()
 
@@ -24,7 +28,7 @@ const Example2 = () => {
         {
           label: 'yes',
           onClick: () => {
-      setPageNum((prev) => prev + 1)
+            fetchNextPage()
       }
       },
       {label: 'No'}
@@ -42,18 +46,22 @@ const Example2 = () => {
 
     if (post) intObserver.current.observe(post)
   },
-[loading, hasNextPage]
+[isFetchingNextPage,fetchNextPage, hasNextPage]
 )
-if (isError) return <p className="center">Error : {error.message}</p>;
+if (status === 'error') return <p className="center">Error : {error.message}</p>;
 
-  const content = results.map((post, i) =>{
-    if (results.length === i + 1) {
-
-    return <Post ref= {lastPostRef} key={post.id} post= {post} />
-
-    }
-    return <Post key={post.id} post= {post} />
+  const content = data?.pages.map(pg => {
+    return results.map((post, i) =>{
+        if (results.length === i + 1) {
+    
+        return <Post ref= {lastPostRef} key={post.id} post= {post} />
+    
+        }
+        return <Post key={post.id} post= {post} />
+      })
   })
+  
+  
 
   return (
     <>
