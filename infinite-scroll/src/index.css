@@ -47,6 +47,7 @@ p::first-letter {
 a:any-link {
   color: whitesmoke;
 }
+
 a:hover,
 a:focus-within {
   color: hsla(0, 0%, 96%, 0.9);
