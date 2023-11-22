@@ -6,7 +6,7 @@ import Post from "./Post"
 
 const Example1 = () => {
   const [pageNum, setPageNum] = useState(1);
-  const { loading, isError, error, results, hasNextPae } = usePosts(pageNum);
+  const { loading, isError, error, results, hasNextPage } = usePosts(pageNum);
 
   if (isError) return <p className="center">Error : {error.message}</p>;
 
@@ -19,8 +19,10 @@ const Example1 = () => {
 
     intObserver.current = new IntersectionObserver((post) => {
       if (post [0]. isIntersecting && hasNextPage)
-      console.log();
+      console.log("we are near the last post");
+    setPageNum(prev => prev + 1 )
     })
+    if (post) int 
   })
 
   const content = results.map((post, i) =>{
