@@ -9,6 +9,10 @@ const Example1 = () => {
     </h1>
 
     <p className="center">
+        Loading more posts...
+    </p>
+
+    <p className="center">
         <a href="#top">Back to Top</a>
 
     </p>
